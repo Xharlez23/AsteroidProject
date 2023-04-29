@@ -46,6 +46,7 @@ public class registrar extends AppCompatActivity implements View.OnClickListener
             u.setFirt_name(firt_name.getText().toString());
             u.setLast_name(last_name.getText().toString());
             u.setIdentificador(Integer.parseInt(identificador.getText().toString()));
+            //  dao.procesarAsteroides();
             if (!u.isNull()){
                 Toast.makeText(this,"Error: Campos vacios, por favor llenar campos", Toast.LENGTH_LONG).show();
             } else if (dao.insertUsuario(u)) {

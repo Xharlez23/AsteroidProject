@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -14,6 +15,7 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener {
 
     int id = 0;
     Usuario u;
+    Asteroide a;
     DaoUsuario dao;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +28,9 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener {
         id= b.getInt("id");
         dao=new DaoUsuario(this);
         u=dao.getUsuarioId(id);
+        a=dao.getAsteroides();
         nombre.setText(u.getEmail()+" "+u.getFirt_name());
+        // nombre.setText(a.getName());
         btnVolver.setOnClickListener(this);
     }
 
