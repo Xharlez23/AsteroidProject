@@ -154,19 +154,17 @@ public class DaoUsuario<Int> {
             }
         }
     public boolean insertAsteroides(Asteroide a){
+        Log.i("ASasdas¿das´pdasod", String.valueOf(a));
+            /*
             ContentValues cv=new ContentValues();
             cv.put("neo_reference_id",a.getNeo_reference_id());
             cv.put("name",a.getName());
             cv.put("nasa_jpl_url",a.getNasa_jpl_url());
             cv.put("absolute_magnitude",a.getAbsolute_magnitude());
-            cv.put("estimated_diameter_min",a.getEstimated_diameter_min());
-            cv.put("estimated_diameter_max",a.getEstimated_diameter_max());
-            cv.put("miss_distance",a.getMiss_distance());
-            cv.put("velocity",a.getVelocity());
-            cv.put("hazardous",a.isHazardous());
-            cv.put("user_id",u.getId());
             Log.i("asteroid-bd",cv.toString());
-            return (sql.insert("asteroid",null,cv)>0);
+            return (sql.insert("asteroid",null,cv)>0);/*
+             */
+        return true;
 
     }
     public ArrayList<Asteroide> selectAsteroids() {
