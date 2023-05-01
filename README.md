@@ -17,7 +17,14 @@ Si los datos ingresados son correctos, serás dirigido a la pantalla de visualiz
 En la pantalla de visualización de asteroides, podrás ver una lista de los asteroides disponibles en la API REST.
 Puedes seleccionar cualquier asteroide de la lista para ver detalles adicionales sobre él.
 
+Lenguaje de programación
+Este proyecto fue desarrollado utilizando el lenguaje de programación Java.
 
+Base de datos
+Este proyecto utiliza una base de datos SQLite para almacenar la información del usuario.
+
+Información de la API
+Este proyecto utiliza la API de la NASA Asteroids - NeoWs (Near Earth Object Web Service) para obtener información sobre los asteroides. Puedes encontrar más información sobre esta API en el siguiente enlace: https://api.nasa.gov/api.html#NeoWS
 
 Contacto
 Si tienes preguntas o comentarios sobre este proyecto, por favor contáctame a través de mi correo electrónico (carlosmmontoya9@gmail.com).
