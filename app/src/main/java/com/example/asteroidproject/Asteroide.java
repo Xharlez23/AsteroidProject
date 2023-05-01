@@ -4,17 +4,17 @@ import org.json.JSONArray;
 
 public class Asteroide {
 
-    int id,user_id;
-    String neo_reference_id,name,nasa_jpl_url;
-    Double absolute_magnitude,estimated_diameter_min,estimated_diameter_max,miss_distance,velocity;
+    int id, user_id;
+    String neo_reference_id, name, nasa_jpl_url;
+    Double absolute_magnitude, estimated_diameter_min, estimated_diameter_max, miss_distance, velocity;
     boolean hazardous;
-    JSONArray close_approach_date;
 
     public Asteroide() {
     }
 
-    public Asteroide(int id, String neo_reference_id, String name, String nasa_jpl_url, Double absolute_magnitude, Double estimated_diameter_min, Double estimated_diameter_max, Double miss_distance, Double velocity, boolean hazardous, JSONArray close_approach_date,int user_id) {
+    public Asteroide(int id, int user_id, String neo_reference_id, String name, String nasa_jpl_url, Double absolute_magnitude, Double estimated_diameter_min, Double estimated_diameter_max, Double miss_distance, Double velocity, boolean hazardous) {
         this.id = id;
+        this.user_id = user_id;
         this.neo_reference_id = neo_reference_id;
         this.name = name;
         this.nasa_jpl_url = nasa_jpl_url;
@@ -24,28 +24,22 @@ public class Asteroide {
         this.miss_distance = miss_distance;
         this.velocity = velocity;
         this.hazardous = hazardous;
-        this.close_approach_date = close_approach_date;
-        this.user_id = user_id;
-    }
-
-    public Asteroide(String neo_reference_id, String name, String nasa_jpl_url, double absolute_magnitude, double estimated_diameter_min, double estimated_diameter_max, boolean isHazardous, String close_approach_date, double miss_distance_km, double velocity, int user_id) {
     }
 
     @Override
     public String toString() {
         return "Asteroide{" +
                 "id=" + id +
+                ", user_id=" + user_id +
                 ", neo_reference_id='" + neo_reference_id + '\'' +
                 ", name='" + name + '\'' +
                 ", nasa_jpl_url='" + nasa_jpl_url + '\'' +
-                ", hazardous='" + hazardous + '\'' +
                 ", absolute_magnitude=" + absolute_magnitude +
                 ", estimated_diameter_min=" + estimated_diameter_min +
                 ", estimated_diameter_max=" + estimated_diameter_max +
-                ", close_approach_date=" + close_approach_date +
                 ", miss_distance=" + miss_distance +
                 ", velocity=" + velocity +
-                ", user_id=" + user_id +
+                ", hazardous=" + hazardous +
                 '}';
     }
 
@@ -55,6 +49,14 @@ public class Asteroide {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 
     public String getNeo_reference_id() {
@@ -127,21 +129,5 @@ public class Asteroide {
 
     public void setHazardous(boolean hazardous) {
         this.hazardous = hazardous;
-    }
-
-    public JSONArray getClose_approach_date() {
-        return close_approach_date;
-    }
-
-    public void setClose_approach_date(JSONArray close_approach_date) {
-        this.close_approach_date = close_approach_date;
-    }
-
-    public int getUser_id() {
-        return user_id;
-    }
-
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
     }
 }

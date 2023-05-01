@@ -6,31 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".Inicio">
 
-    <TextView
-        android:id="@+id/nombre"
-        android:layout_width="201dp"
-        android:layout_height="205dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.167" />
-
     <Button
+        style="?android:attr/borderlessButtonStyle"
         android:id="@+id/btnVolver"
-        android:layout_width="150dp"
-        android:layout_height="45dp"
+        android:layout_width="114dp"
+        android:layout_height="30dp"
         android:layout_margin="20dp"
         android:layout_marginTop="20dp"
-        android:background="#0000FF"
-        android:text="Cerrar"
-        android:textSize="25dp"
-        android:textStyle="bold"
+        android:background="#EEEEF1"
+        android:text="Cerrar sesión"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.973"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombre"
-        app:layout_constraintVertical_bias="0.898" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/nombre"
+        android:layout_width="409dp"
+        android:layout_height="436dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
